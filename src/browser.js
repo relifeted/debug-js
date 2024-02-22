@@ -240,7 +240,7 @@ function save(namespaces) {
 function load() {
   let r
   try {
-    r = exports.storage.getItem('debug')
+    r = exports.storage.getItem('logger')
   } catch (error) {
     // Swallow
     // XXX (@Qix-) should we be logging these?
@@ -250,6 +250,7 @@ function load() {
   if (!r && typeof process !== 'undefined' && 'env' in process) {
     r = process.env.LOGGER
   }
+  console.log('r:', r)
 
   return r
 }

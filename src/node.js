@@ -148,6 +148,7 @@ function save(namespaces) {
  */
 
 function load() {
+  console.log('process.env.LOGGER:', process.env.LOGGER)
   return process.env.LOGGER
 }
 
